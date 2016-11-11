@@ -1,0 +1,412 @@
+@import 'colors';
+
+/*** Entire Page ***/
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #fff;
+	color: #000;
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+h1{
+	margin: 25px 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+#bodyWrapper {
+	width: 958px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+/*** Why Us ***/
+#title {
+	h1 {
+	font: bold 30px;
+	text-align: center;
+	margin: 25px 0px;
+	}
+	p {
+	font-size: 18px;
+	margin: 0px;
+	text-align: center;
+	}
+}
+
+/*** Section 2 ***/
+#info {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.float {
+	width: 50%;
+	float: left;
+	margin-bottom: 50px;
+}
+.toolImg {
+	float: right;
+}
+
+#details {
+	border-top: solid 10px $yellow;
+	width: 400px;
+	padding: 0px 25px;
+	text-align: left; 
+	height: 265px;
+}
+
+#details {
+	a {
+	color: $dkRed;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: bold;
+	}
+	a:hover {
+	color: #000;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	}
+	p {
+	font-size: 18px;
+	padding: 25px 0px;
+	margin: 0px;
+	width: 95%;
+	}
+	p:last-child {
+	width: 70%;
+	padding-top: 0px;
+	}
+}
+
+/*** Section 3***/
+hr {
+	clear: both;
+	margin: 25px 0px 50px;
+}
+.floating{
+	@extend #info;
+	text-align: left;
+	margin-bottom: 50px;
+}
+.floating p {
+	color: $red;
+}
+
+#aboutUs {
+	h1 {
+	font: bold 24px;
+	margin: 0px 0px 25px;
+	}
+	p {
+	font-size: 15px;
+	width: 98%;
+	padding: 10px;
+	}
+	img {
+	float: left;
+	margin-right: 40px;
+	}
+}
+
+.bolded {
+	font-weight: bold;
+}
+
+/*** Section 4***/
+#upcomingEvent, #mainImg, #holiday, #centerImg {
+	@extend #info;
+}
+
+#hero1 {
+	width: 100%;
+}
+#hero2 {
+	display: none;
+}
+
+#upcomingEvent {
+ 	margin: 25px 0px;
+}
+
+#ctaButton {
+	color: #fff;
+	background-color: $red;
+	border-radius: 15px;
+	float: right;
+	position: relative;
+	left: -25px;
+	bottom: 80px;
+	width: 140px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	border: solid $red;
+}
+
+#ctaButton:hover {
+	background-color: $dkRed;
+	border: $dkRed;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+
+#mobileEvents {
+	display: none;
+}
+
+/*** holiday ***/
+#holiday {
+	h1{
+	font: bold 24px;
+	text-align: left;
+	}
+	h2 {
+	font: bold 18px;
+	text-align: left;
+	margin-left: 25px;
+	color: #000;
+	}
+	h3 {
+	font-size: 14px;
+	text-align: left;
+	margin-left: 25px;
+	color: #000;
+	}
+}
+
+.images{
+	display: inline-block;
+	margin-top: 25px;
+}
+
+#image1 {
+    width: 305px;
+	height: 256px;
+	background: url(imgs/cake1.jpeg);
+    background-size: 100% 100%;
+}
+
+#image2 {
+ 	width: 305px;
+	height: 256px;
+	background: url(imgs/cake2.jpeg);
+    background-size: 100% 100%;
+	margin: 0px 15px;
+}
+
+#image3 {
+ 	width: 305px;
+	height: 256px;
+	background: url(imgs/cake3.jpeg);
+    background-size: 100% 100%;
+}
+.overlay {  
+	width: 100%;
+	height: 100%; 
+	background: rgba( 0, 0, 0, 0.3);
+	text-align: center;
+	opacity: 0;
+	display: inline-block;
+}
+
+#image1:hover .overlay, #image2:hover .overlay, #image3:hover .overlay  {
+	opacity:1;
+	z-index: 1000;
+	color: #fff;
+	transition-duration: 0.3s;
+}
+
+.nameBox{
+	background-color: rgb(240, 240, 240);
+	display: inline-block;
+	width: 100%;
+	margin-top: -5px;
+}
+
+.nameBox:hover {
+	background-color: rgba( 0, 0, 0, 0.3);
+	transition-duration: 0.3s;
+}
+
+/*** Footer ***/
+#nextStep {
+	background-color: $yellow;
+	width: 100%;
+	margin: 50px 0px;
+	clear: both;
+}
+#nextStep {
+	h1 {
+	font: bold 24px;
+	color: $red;
+	margin: 0px;
+	padding: 25px;
+	}
+	p{
+	font-size: 15px;
+	width: 60%;
+	font-weight: bold;
+	padding: 10px 25px 25px;
+	margin: 0px;
+	}
+}
+
+#eventBtn {
+	@extend #ctaButton;
+	left: -126px;
+	bottom: 118px;
+	width: auto;
+	height: auto;
+	padding: 5px 50px;
+}
+#eventBtn:hover {
+	@extend #eventBtn;
+	color: $red;
+	background-color: $yellow;
+	border: solid $yellow;
+	transition-duration: 0.3s;
+}
+
+
+@media all and (max-width: 1060px){
+#bodyWrapper {
+	width: 90%;
+}
+
+#info {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.float {
+	display: inline-block;
+	float: none;
+}
+
+.toolImg{
+	float: none;
+	width: 100%; 
+}
+
+#aboutUs p {
+	text-align: left;
+}
+
+#details {
+	width: auto;
+	height: auto;
+}
+
+#eventBtn {
+	left: -100px;
+	bottom: 110px;
+	padding: 5px 50px;
+}
+
+#holiday h1 {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+}
+
+@media all and (max-width: 760px){
+#eventBtn {
+	left: -50px;
+	bottom: 90px;
+	padding: 5px 50px;
+}
+
+#nextStep p {
+	width: 80%; 
+}
+#aboutUs img {
+	float: none;
+	margin: 0px;
+}
+
+#ctaButton {
+    float: none;
+    position: initial;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+	margin: 0 auto; 
+	text-align: center;
+	display: block;
+}
+
+#eventBtn {
+	width: 100%;
+	margin-bottom: 50px;
+}
+.float {
+	width: 100%;
+}
+#upcomingEvent {
+	display: none;
+}
+
+#mobileEvents {
+	display: initial;
+}
+#floater {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 25px;
+}
+}
+
+@media all and (max-width: 600px){
+#hero1{
+	display: none;
+}
+#hero2{
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#mobileEvents {
+	h1 {
+	font-size: 24px;
+	font-weight: bold;
+	}
+	p {
+	font-size: 14px;
+	}
+}
+}
+
+@media all and (max-width: 320px){
+hr {
+	display: none;
+}
+.toolImg {
+	margin: 25px 0px;
+}
+
+#desktopImg {
+	display: none;
+}
+#eventBtn {
+	padding: 5px;
+}
+#image1, #image2, #image3 {
+ 	width: 240px;
+	height: 191px;
+}
+#image2 {
+	margin: 0px;
+}
+}
